@@ -1,21 +1,87 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.item {
+  height: 100vh;
+  background: #f5f5f5;
+  color: #4d4d4d;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.title {
+  width:100vw;
+  display: block;
+  padding: 20px 0;
+  font-size: 44px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+  font-family: Courier New, Courier, monospace;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.item-input {
+  margin: 0 25px;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: #fff;
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  line-height: 1.4em;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
 }
 
-.usermotto {
-  margin-top: 200px;
+.main {
+    margin: 0 25px;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid #e6e6e6;
+}
+
+.todos-item {
+   position: relative;
+  padding: 12px 10px;
+  font-size: 14px;
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+}
+
+icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-l {
+  left: 10px;
+}
+
+.icon-r {
+  right: 10px;
+}
+
+.v-m {
+  vertical-align: middle;
+}
+
+.text {
+  padding-left: 30px;
+}
+
+.menue {
+  font-size: 12px;
+  color: lightgrey;
+}
+
+.conut {
+  display: inline-block;
+  margin: 0 36px 0 6px;
+}
+
+.menue text {
+  margin-right: 30px;
+  padding: 4px 5px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.menue .act {
+  border-color: rgba(175, 47, 47, 0.3)
 }

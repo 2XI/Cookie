@@ -1,10 +1,17 @@
 <!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="item">
+  <text class="title">todos</text>
+  <input bindconfirm="finish" placeholder="What needs to be done?" value="{{ val }}" class="item-input" type="text"/>
+  <view class="main">
+    <view wx:for="{{ items }}" wx:key="item.id" if="!item.completed" class="todos-item">
+      <icon bindtap='setComplete' id="{{ item.id }}" class="v-m icon-l" type="{{ item.completed ? 'success' : 'circle' }}" size="19"></icon>
+      <text class="text v-m">{{ item.txt }}</text>
+      <icon bindtap="deleteItem" class="v-m icon-r"  id="{{ item.id }}" type="clear" size="16"></icon>
+    </view>
+    <view class="menue todos-item">
+      <view class="conut">{{ items.length }} item left</view>
+      <text bindtap="bindAll" class="{{ all }}">All</text>
+      <text  bindtap="bindCompleted" class="{{ completed }}">Completed</text>
+    </view>
+	</view>
 </view>
