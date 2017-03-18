@@ -17,6 +17,12 @@ Page({
   },
   onLoad: function (){
       this.init()
+      var items = wx.getStorageSync('items')
+      if(items) {
+        this.setData({
+            items: wx.getStorageSync('items')
+        })
+      }
   },
   setComplete: function(e){
       this.init()
@@ -71,5 +77,9 @@ Page({
             items: data,
             val: ''
       })
+      wx.setStorageSync('items', this.data.items)
+  },
+  onUnload: function(){
+      wx.setStorageSync('items', this.data.items)
   }
 })
